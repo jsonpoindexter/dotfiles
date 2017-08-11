@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.zplug: zplug
+    ~/.gitconfig: gitconfig

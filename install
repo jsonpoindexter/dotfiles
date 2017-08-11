@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+set -e
+
+CONFIG_SUFFIX=".conf.yaml"
+DOTBOT_DIR="dotbot"
+
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "${BASEDIR}"
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+# Use default config
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "default${CONFIG_SUFFIX}" "${@}"
+
+# Determine current machine
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=linux;;
+    Darwin*)    machine=darwin;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+# Use machine config if available
+if [ -f "${machine}${CONFIG_SUFFIX}" ]; then
+  "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${machine}${CONFIG_SUFFIX}" "${@}"
+fi

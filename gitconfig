@@ -1,0 +1,12 @@
+[user]
+	name = Ryan Leckey
+	email = "leckey.ryan@gmail.com"
+
+[user "https://mehcode@bitbucket.launchbadge.com/scm"]
+	email = "ryan@launchbadge.com"
+
+[ghq]
+  root = "~/Workspace"
+
+[credential]
+	helper = gnome-keyring
