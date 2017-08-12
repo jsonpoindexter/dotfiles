@@ -9,3 +9,4 @@
     ~/.zshrc: zshrc
     ~/.zplug: zplug
     ~/.gitconfig: gitconfig
+    ~/.gitconfig-launchbadge: gitconfig-launchbadge
