@@ -128,12 +128,16 @@ alias ch='cd ~'
 
 # Cargo
 # ==============================================================================
-
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Tilix
 # ==============================================================================
-
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi
+
+# node.js
+# ==============================================================================
+# Set the "global" package directory to be inside $HOME
+export PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
