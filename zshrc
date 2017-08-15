@@ -12,16 +12,14 @@ case "${unameOut}" in
     *)          machine="UNKNOWN:${unameOut}"
 esac
 
-# Contains some useful stuff like up-arrow search
-# https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/key-bindings.zsh
-zplug "lib/key-bindings", from:oh-my-zsh
-
-# clipcopy & clippaste
-# https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/clipboard.zsh
-zplug "lib/clipboard", from:oh-my-zsh
-
 # Turn on colors for all prezto modules
 zstyle ':prezto:*:*' color 'yes'
+
+# https://github.com/sorin-ionescu/prezto/tree/master/modules/editor
+zstyle ':prezto:module:editor' key-bindings 'emacs'
+zstyle ':prezto:module:editor' ps-context 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:editor:info:completing' format '...'
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/environment/init.zsh
 zplug "modules/environment", from:prezto
@@ -75,8 +73,8 @@ zplug "junegunn/fzf-bin", \
     rename-to:fzf, \
     use:"*${machine}*amd64*"
 
-zplug "junegunn/fzf", use:"shell/completion.zsh", defer:2
-zplug "junegunn/fzf", use:"shell/key-bindings.zsh", defer:2
+zplug "junegunn/fzf", use:"shell/completion.zsh", defer:3
+zplug "junegunn/fzf", use:"shell/key-bindings.zsh", defer:3
 
 # By default fzf starts in fullscreen
 # This reverse it and tells it to use at most 40% of my window
@@ -106,8 +104,12 @@ zplug "zsh-users/zsh-autosuggestions", defer:2
 export ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
+# History Search (up/down arrows)
+# https://github.com/sorin-ionescu/prezto/blob/master/modules/history-substring-search/init.zsh
+zplug "modules/history-substring-search", from:prezto, defer:3
+
 # Theme ------------------------------------------------------------------------
-zplug "oskarkrawczyk/honukai-iterm-zsh", as:theme
+zplug "dracula/zsh", as:theme
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
@@ -116,6 +118,15 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+# Configure history search
+
+# Ensures history results are unique when searching
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+
+# Colorize found/not-found
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='underline'
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='none'
 
 # Aliases
 # ==============================================================================
