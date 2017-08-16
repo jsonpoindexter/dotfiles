@@ -18,7 +18,6 @@ zstyle ':prezto:*:*' color 'yes'
 # https://github.com/sorin-ionescu/prezto/tree/master/modules/editor
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' ps-context 'yes'
-zstyle ':prezto:module:editor' dot-expansion 'yes'
 zstyle ':prezto:module:editor:info:completing' format '...'
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/environment/init.zsh
@@ -83,6 +82,8 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse'
 # enhancd - A next-generation cd command with an interactive filter (uses fzf)
 # https://github.com/b4b4r07/enhancd
 zplug "b4b4r07/enhancd", use:init.sh, defer:2
+
+export ENHANCD_DOT_ARG='...'
 
 # Syntax highlight command prompt
 # https://github.com/sorin-ionescu/prezto/tree/master/modules/syntax-highlighting
