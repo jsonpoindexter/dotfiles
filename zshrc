@@ -133,14 +133,20 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='none'
 # ==============================================================================
 
 # Change to a git repo (managed through ghq)
-alias cg='cd --ghq'
+alias cg='cd -G'
 
 # Change to home
 alias ch='cd ~'
 
+# Android
+# ==============================================================================
+export ANDROID_HOME="$HOME/Android/Sdk"
+export NDK_HOME="$ANDROID_HOME/ndk-bundle"
+
 # Cargo
 # ==============================================================================
 export PATH="$HOME/.cargo/bin:$PATH"
+export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
 
 # Tilix
 # ==============================================================================
@@ -153,3 +159,8 @@ fi
 # Set the "global" package directory to be inside $HOME
 export PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
+
+# Go
+# ==============================================================================
+export GOPATH="$HOME/.go"
+export PATH="$GOPATH/bin:$PATH" 

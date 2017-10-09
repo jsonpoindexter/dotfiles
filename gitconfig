@@ -1,12 +1,19 @@
 [user]
-	name = Ryan Leckey
-	email = "leckey.ryan@gmail.com"
+  name = Ryan Leckey
+  email = "leckey.ryan@gmail.com"
 
 [ghq]
-  root = "~/Workspace"
+  root = ~/Workspace
+  root = ~/.go/src
 
 [credential]
-	helper = gnome-keyring
+  helper = gnome-keyring
+
+[includeIf "gitdir:~/.go/src/bitbucket.launchbadge.com/"]
+  path = ~/.gitconfig-launchbadge
+
+[includeIf "gitdir:~/Workspace/git.launchbadge.com/"]
+  path = ~/.gitconfig-launchbadge
 
 [includeIf "gitdir:~/Workspace/bitbucket.launchbadge.com/"]
   path = ~/.gitconfig-launchbadge
