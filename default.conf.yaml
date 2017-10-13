@@ -10,3 +10,6 @@
     ~/.zplug: zplug
     ~/.gitconfig: gitconfig
     ~/.gitconfig-launchbadge: gitconfig-launchbadge
+
+- shell:
+  - ["git submodule update --init --recursive", "Installing submodules"]

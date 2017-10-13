@@ -138,27 +138,15 @@ alias cg='cd -G'
 # Change to home
 alias ch='cd ~'
 
-# Android
+# TODO Android
 # ==============================================================================
-export ANDROID_HOME="$HOME/Android/Sdk"
-export NDK_HOME="$ANDROID_HOME/ndk-bundle"
+# export ANDROID_HOME=
+# export NDK_HOME="$ANDROID_HOME/ndk-bundle"
 
 # Cargo
 # ==============================================================================
 export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
-
-# Tilix
-# ==============================================================================
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-  source /etc/profile.d/vte.sh
-fi
-
-# node.js
-# ==============================================================================
-# Set the "global" package directory to be inside $HOME
-export PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
 
 # Go
 # ==============================================================================

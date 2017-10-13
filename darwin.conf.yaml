@@ -1,0 +1,12 @@
+- tap:
+  - caskroom/fonts
+
+- brew:
+  - go
+  - imagemagick
+  - nodejs
+  - git-lfs
+  - git-crypt
+
+- cask:
+  - font-iosevka

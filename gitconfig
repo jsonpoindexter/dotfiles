@@ -6,9 +6,6 @@
   root = ~/Workspace
   root = ~/.go/src
 
-[credential]
-  helper = gnome-keyring
-
 [includeIf "gitdir:~/.go/src/bitbucket.launchbadge.com/"]
   path = ~/.gitconfig-launchbadge
 
