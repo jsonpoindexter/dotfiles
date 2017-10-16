@@ -1,5 +1,6 @@
 - tap:
   - caskroom/fonts
+  - paritytech/paritytech
 
 - brew:
   - go
@@ -7,6 +8,7 @@
   - nodejs
   - git-lfs
   - git-crypt
+  - parity
 
 - cask:
   - font-iosevka
