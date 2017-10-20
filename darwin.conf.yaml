@@ -3,12 +3,16 @@
   - paritytech/paritytech
 
 - brew:
+  - cmake
+  - htop
   - go
   - imagemagick
   - nodejs
   - git-lfs
+  - watchman
   - git-crypt
   - parity
+  - gpg
 
 - cask:
   - font-iosevka

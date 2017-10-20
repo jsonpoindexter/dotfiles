@@ -12,6 +12,14 @@ case "${unameOut}" in
     *)          machine="UNKNOWN:${unameOut}"
 esac
 
+# Determine current os
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     os=linux;;
+    Darwin*)    os=macos;;
+    *)          os="UNKNOWN:${unameOut}"
+esac
+
 # Turn on colors for all prezto modules
 zstyle ':prezto:*:*' color 'yes'
 
@@ -64,6 +72,14 @@ zplug "motemen/ghq", \
     rename-to:ghq, \
     use:"*${machine}*amd64*"
 
+# exa - Replacement for 'ls' written in Rust
+# https://github.com/ogham/exa
+zplug "ogham/exa", \
+    from:gh-r, \
+    as:command, \
+    rename-to:exa, \
+    use:"*${os}*x86_64*"
+
 # fzf - General-purpose command-line fuzzy finder
 # https://github.com/junegunn/fzf
 zplug "junegunn/fzf-bin", \
@@ -72,16 +88,13 @@ zplug "junegunn/fzf-bin", \
     rename-to:fzf, \
     use:"*${machine}*amd64*"
 
-zplug "junegunn/fzf", use:"shell/completion.zsh", defer:3
-zplug "junegunn/fzf", use:"shell/key-bindings.zsh", defer:3
-
 # By default fzf starts in fullscreen
 # This reverse it and tells it to use at most 40% of my window
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
 
 # enhancd - A next-generation cd command with an interactive filter (uses fzf)
 # https://github.com/b4b4r07/enhancd
-zplug "b4b4r07/enhancd", use:init.sh, defer:2
+zplug "b4b4r07/enhancd", use:init.sh, defer:3
 
 export ENHANCD_DOT_ARG='...'
 
@@ -129,6 +142,10 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='underline'
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='none'
 
+# fzf
+source ~/.zplug/repos/junegunn/fzf/shell/completion.zsh
+source ~/.zplug/repos/junegunn/fzf/shell/key-bindings.zsh
+
 # Aliases
 # ==============================================================================
 
@@ -138,10 +155,23 @@ alias cg='cd -G'
 # Change to home
 alias ch='cd ~'
 
-# TODO Android
+# exa -> ls
+function ls () {
+    if [ $(git rev-parse --is-inside-work-tree 2> /dev/null) ]
+    then
+        exa --group-directories-first --git $@
+    else
+        exa --group-directories-first $@
+    fi
+}
+
+alias l='ls -1'
+alias ll='ls -l'
+
+# Android
 # ==============================================================================
-# export ANDROID_HOME=
-# export NDK_HOME="$ANDROID_HOME/ndk-bundle"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export NDK_HOME="$ANDROID_HOME/ndk-bundle"
 
 # Cargo
 # ==============================================================================
@@ -152,3 +182,12 @@ export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
 # ==============================================================================
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH" 
+
+# Google Cloud SDK
+# ==============================================================================
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+# iTerm
+# ==============================================================================
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
