@@ -164,17 +164,10 @@ alias cg='cd -G'
 alias ch='cd ~'
 
 # exa -> ls
-function ls () {
-    if [ $(git rev-parse --is-inside-work-tree 2> /dev/null) ]
-    then
-        exa --group-directories-first --git $@
-    else
-        exa --group-directories-first $@
-    fi
-}
-
+alias ls='exa --group-directories-first'
 alias l='ls -1'
 alias ll='ls -l'
+alias la='ls -la'
 
 # Android
 # ==============================================================================
