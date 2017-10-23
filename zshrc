@@ -88,6 +88,14 @@ zplug "junegunn/fzf-bin", \
     rename-to:fzf, \
     use:"*${machine}*amd64*"
 
+# ripgrep - Replacement for 'grep' written in Rust
+# https://github.com/BurntSushi/ripgrep
+zplug "BurntSushi/ripgrep", \
+    from:gh-r, \
+    as:command, \
+    rename-to:rg, \
+    use:"*x86_64*${machine}*"
+
 # By default fzf starts in fullscreen
 # This reverse it and tells it to use at most 40% of my window
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
