@@ -64,6 +64,12 @@ zplug "modules/git", from:prezto
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zplug "modules/completion", from:prezto
 
+# enhancd - A next-generation cd command with an interactive filter (uses fzf)
+# https://github.com/b4b4r07/enhancd
+zplug "b4b4r07/enhancd", use:init.sh, defer:3
+
+export ENHANCD_DOT_ARG='...'
+
 # ghq - Remote repository management made easy
 # https://github.com/motemen/ghq
 zplug "motemen/ghq", \
@@ -99,12 +105,6 @@ zplug "BurntSushi/ripgrep", \
 # By default fzf starts in fullscreen
 # This reverse it and tells it to use at most 40% of my window
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
-
-# enhancd - A next-generation cd command with an interactive filter (uses fzf)
-# https://github.com/b4b4r07/enhancd
-zplug "b4b4r07/enhancd", use:init.sh, defer:3
-
-export ENHANCD_DOT_ARG='...'
 
 # Syntax highlight command prompt
 # https://github.com/sorin-ionescu/prezto/tree/master/modules/syntax-highlighting
@@ -182,7 +182,7 @@ export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/ru
 # Go
 # ==============================================================================
 export GOPATH="$HOME/.go"
-export PATH="$GOPATH/bin:$PATH" 
+export PATH="$GOPATH/bin:$PATH"
 
 # Google Cloud SDK
 # ==============================================================================
