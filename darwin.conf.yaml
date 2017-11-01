@@ -1,8 +1,11 @@
 - tap:
   - caskroom/fonts
   - paritytech/paritytech
+  - ethereum/ethereum
+  - git-time-metric/gtm
 
 - brew:
+  - gtm
   - cmake
   - htop
   - go
@@ -13,6 +16,8 @@
   - git-crypt
   - parity
   - gpg
+  - solidity
 
 - cask:
   - font-iosevka
+  - fastlane

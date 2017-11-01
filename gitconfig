@@ -1,6 +1,6 @@
 [user]
   name = Ryan Leckey
-  email = "leckey.ryan@gmail.com"
+	email = ryan@launchbadge.com
 
 [ghq]
   root = ~/Workspace
@@ -14,3 +14,5 @@
 
 [includeIf "gitdir:~/Workspace/bitbucket.launchbadge.com/"]
   path = ~/.gitconfig-launchbadge
+[mergetool]
+	keepBackup = false

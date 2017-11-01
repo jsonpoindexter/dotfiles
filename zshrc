@@ -1,7 +1,5 @@
-
 # Plugins (managed through zplug)
 # ==============================================================================
-
 source ~/.zplug/init.zsh
 
 # Determine current machine
@@ -130,6 +128,9 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=1
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/history-substring-search/init.zsh
 zplug "modules/history-substring-search", from:prezto, defer:3
 
+# Git Time Tracking
+zplug "git-time-metric/gtm-terminal-plugin", use:"gtm-plugin.sh"
+
 # Theme ------------------------------------------------------------------------
 zplug "dracula/zsh", as:theme
 
@@ -151,8 +152,15 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='underline'
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='none'
 
 # fzf
+# ==============================================================================
+
+# Activate completion and key bindings
 source ~/.zplug/repos/junegunn/fzf/shell/completion.zsh
 source ~/.zplug/repos/junegunn/fzf/shell/key-bindings.zsh
+
+# Bind to RipGrep
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Aliases
 # ==============================================================================
@@ -192,3 +200,7 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 # iTerm
 # ==============================================================================
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Fastlane
+# ==============================================================================
+export PATH="$HOME/.fastlane/bin:$PATH"
