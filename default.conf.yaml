@@ -5,11 +5,16 @@
       relink: true
       create: true
 
-- link:
-    ~/.zshrc: zshrc
-    ~/.zplug: zplug
-    ~/.gitconfig: gitconfig
-    ~/.gitconfig-launchbadge: gitconfig-launchbadge
-
 - shell:
   - ["git submodule update --init --recursive", "Installing submodules"]
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.gitconfig-launchbadge: gitconfig-launchbadge
+    ~/.zprezto: prezto
+    ~/.zshrc: zshrc
+    ~/.zlogin: zlogin
+    ~/.zlogout: zlogout
+    ~/.zshenv: zshenv
+    ~/.zprofile: zprofile
+    ~/.zpreztorc: zpreztorc

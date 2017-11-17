@@ -1,8 +1,6 @@
 - tap:
   - caskroom/fonts
-  - paritytech/paritytech
   - ethereum/ethereum
-  - git-time-metric/gtm
 
 - brew:
   - gtm
@@ -14,10 +12,16 @@
   - git-lfs
   - watchman
   - git-crypt
-  - parity
   - gpg
   - solidity
+  - lesspipe
+  - fzy
+  - ghq
+  - exa
+  - ripgrep
 
 - cask:
   - font-iosevka
   - fastlane
+  - font-input
+  - font-source-code-pro

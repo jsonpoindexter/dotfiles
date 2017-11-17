@@ -7,3 +7,9 @@
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
+[submodule "prezto"]
+	path = prezto
+	url = https://github.com/sorin-ionescu/prezto.git
+[submodule "enhancd"]
+	path = enhancd
+	url = https://github.com/b4b4r07/enhancd
