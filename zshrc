@@ -1,6 +1,7 @@
 #
 # Executes commands at the start of an interactive session.
-#$
+#
+
 #
 # Prezto
 #
@@ -43,3 +44,27 @@ alias la='ls -la'
 #
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+#
+# Android
+#
+
+export NDK_HOME=$HOME/Library/Android/sdk/ndk-bundle
+
+#
+# Cargo / Rust
+#
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+
+#
+# Go
+#
+export GOPATH="$HOME/.go"
+export PATH="$GOPATH/bin:$PATH"
+
+#
+# Fastlane
+#
+export PATH="$HOME/.fastlane/bin:$PATH"
