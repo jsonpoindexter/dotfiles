@@ -61,10 +61,25 @@ export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/ru
 #
 # Go
 #
+
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
 
 #
 # Fastlane
 #
+
 export PATH="$HOME/.fastlane/bin:$PATH"
+
+#
+# Google Cloud SDK
+#
+
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+#
+# .bin in $HOME
+#
+
+export PATH="$HOME/.bin:$PATH"

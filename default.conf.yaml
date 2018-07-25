@@ -9,6 +9,8 @@
   - ["git submodule update --init --recursive", "Installing submodules"]
 
 - link:
+    ~/.bin/idea: idea.sh
+    ~/.gitignore-global: gitignore-global
     ~/.gitconfig: gitconfig
     ~/.gitconfig-launchbadge: gitconfig-launchbadge
     ~/.zprezto: prezto
