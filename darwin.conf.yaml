@@ -1,9 +1,7 @@
 - tap:
   - caskroom/fonts
-  - ethereum/ethereum
 
 - brew:
-  - gtm
   - cmake
   - htop
   - go
@@ -13,7 +11,6 @@
   - watchman
   - git-crypt
   - gpg
-  - solidity
   - lesspipe
   - fzy
   - ghq
