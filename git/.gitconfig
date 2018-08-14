@@ -1,0 +1,18 @@
+[user]
+	name = Ryan Leckey
+	email = leckey.ryan@gmail.com
+
+[ghq]
+	root = ~/Workspace
+
+[includeIf "gitdir:~/Workspace/bitbucket.launchbadge.com/"]
+	path = ~/.launchbadge.gitconfig
+
+[mergetool]
+	keepBackup = false
+
+[credential]
+	helper = osxkeychain
+
+[core]
+	excludesfile = ~/.gitignore

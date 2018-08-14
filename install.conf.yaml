@@ -1,0 +1,43 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+      glob: true
+
+- shell:
+    # Ensure submodules are up-to-date
+    - "git submodule update --init --recursive"
+
+- clean:
+    - "~"
+
+- shell:
+    # Make directories for link
+    - "mkdir -p ~/.shell"
+    - "mkdir -p ~/.zsh/{plugins,functions}"
+
+- link:
+    # git
+    "~/.gitconfig": "git/.gitconfig"
+    "~/.launchbadge.gitconfig": "git/.launchbadge.gitconfig"
+    "~/.gitignore": "git/.gitignore"
+
+    # shell (generic)
+    "~/.shell/": "shell/*.sh"
+
+    # zsh
+    "~/.zsh/": "zsh/*.zsh"
+    "~/.zsh/functions/prompt_spaceship_setup": "spaceship-prompt/spaceship.zsh"
+    "~/.zshrc": "zshrc"
+
+- brewfile:
+    - Brewfile
+
+- shell:
+    # Install Rust (and Cargo)
+    - "rustup-init -y --no-modify-path"
+
+- shell:
+    # [macOS] Make the Dock (dis)appear faster (but still smooth)
+    - "defaults write com.apple.Dock autohide-delay -float 0"
+    - "defaults write com.apple.Dock autohide-time-modifier -float 0.5"
