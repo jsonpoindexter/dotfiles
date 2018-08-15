@@ -1,8 +1,9 @@
 
-# exa -> ls
+# exa
 alias ls='exa -F --git --group-directories-first'
 
-# ls aliases
-alias ll='ls -lh'
-alias la='ls -a'
-alias l='ls'
+# ls
+alias l='ls -1a'   # Lists in one column, hidden files.
+alias ll='ls -lh'  # Lists human readable sizes.
+alias lr='ll -R'   # Lists human readable sizes, recursively.
+alias la='ll -a'   # Lists human readable sizes, hidden files.
