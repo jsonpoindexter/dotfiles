@@ -29,4 +29,4 @@ source ~/.dotfiles/history-search-multi-word/history-search-multi-word.plugin.zs
 #
 
 SPACESHIP_VI_MODE_SHOW=false
-SPACESHIP_CHAR_SYMBOL="➜  "
+SPACESHIP_CHAR_SYMBOL="❯ "
