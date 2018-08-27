@@ -7,6 +7,10 @@ tap "homebrew/core"
 tap "homebrew/services"
 # Friendly powerful distributed version control system
 brew "bazaar"
+# Cross-platform make
+brew "cmake"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
 # Modern replacement for 'ls'
 brew "exa"
 # Fast, simple fuzzy text selector with an advanced scoring algorithm
@@ -15,6 +19,8 @@ brew "fzy"
 brew "ghq"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Creates dependencies in makefiles
+brew "makedepend"
 # Platform built on V8 to build network applications
 brew "node"
 # Object-relational database system
@@ -29,6 +35,8 @@ brew "ripgrep"
 brew "rustup-init"
 # Generate scripting interfaces to C/C++ code
 brew "swig"
+# User interface to the TELNET protocol (built from macOS Sierra sources)
+brew "telnet"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Task runner / simpler Make alternative written in Go
@@ -36,3 +44,4 @@ brew "go-task/tap/go-task"
 cask "font-iosevka"
 cask "jetbrains-toolbox"
 cask "ngrok"
+cask "spotify"
