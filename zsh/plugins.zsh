@@ -22,11 +22,3 @@ source ~/.dotfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
 #
 
 source ~/.dotfiles/history-search-multi-word/history-search-multi-word.plugin.zsh
-
-#
-# spaceship prompt
-# https://github.com/denysdovhan/spaceship-prompt
-#
-
-SPACESHIP_VI_MODE_SHOW=false
-SPACESHIP_CHAR_SYMBOL="❯ "

@@ -4,9 +4,6 @@
 [submodule "enhancd"]
 	path = enhancd
 	url = https://github.com/b4b4r07/enhancd
-[submodule "spaceship-prompt"]
-	path = spaceship-prompt
-	url = https://github.com/denysdovhan/spaceship-prompt.git
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
