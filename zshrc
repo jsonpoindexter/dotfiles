@@ -15,3 +15,4 @@ for file in ~/.shell/*.sh; do source $file; done
 source ~/.zsh/plugins.zsh
 
 # Prompt
+prompt pure
