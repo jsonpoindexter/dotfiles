@@ -1,4 +1,7 @@
 
+# ripgrep
+alias grep='ripgrep'
+
 # exa
 alias ls='exa -F --git --group-directories-first'
 
