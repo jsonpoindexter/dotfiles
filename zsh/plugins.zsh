@@ -17,8 +17,40 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=25      # disables suggestion for large buffers
 source ~/.dotfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #
-# history-search-multi-word
-# https://github.com/zdharma/history-search-multi-word
+# fzf
+# https://github.com/junegunn/fzf
 #
 
-source ~/.dotfiles/history-search-multi-word/history-search-multi-word.plugin.zsh
+# Setup
+if [[ ! "$PATH" == *$(brew --prefix)/opt/fzf/bin* ]]; then
+  export PATH="$PATH:$(brew --prefix)/opt/fzf/bin"
+fi
+
+# Auto-completion
+[[ $- == *i* ]] && source "$(brew --prefix)/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
+
+# Use fd (https://github.com/sharkdp/fd) instead of the default find
+# command for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
+
+# Use fd directly
+export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git --color=always'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# Define a `preview` command
+alias preview="fzf --preview 'bat --color \"always\" {}' | xargs bat"
+
+# Default options
+export FZF_DEFAULT_OPTS="--ansi --prompt '❯ ' --inline-info --layout reverse --height 50%"
