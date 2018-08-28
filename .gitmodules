@@ -13,3 +13,6 @@
 [submodule "pure"]
 	path = pure
 	url = https://github.com/sindresorhus/pure
+[submodule "gitalias"]
+	path = gitalias
+	url = https://github.com/GitAlias/gitalias
