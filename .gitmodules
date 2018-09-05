@@ -16,3 +16,6 @@
 [submodule "gitalias"]
 	path = gitalias
 	url = https://github.com/GitAlias/gitalias
+[submodule "zsh-syntax-highlighting"]
+	path = zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

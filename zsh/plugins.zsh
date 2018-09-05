@@ -54,3 +54,10 @@ alias preview="fzf --preview 'bat --color \"always\" {}' | xargs bat"
 
 # Default options
 export FZF_DEFAULT_OPTS="--ansi --prompt '❯ ' --inline-info --layout reverse --height 50%"
+
+#
+# zsh-syntax-highlighting
+# https://github.com/zsh-users/zsh-syntax-highlighting
+#
+
+source ~/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
