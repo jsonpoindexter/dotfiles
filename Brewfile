@@ -1,3 +1,4 @@
+tap "alecthomas/tap"
 tap "caryll/tap"
 tap "go-task/tap"
 tap "homebrew/bundle"
@@ -25,6 +26,8 @@ brew "fzf"
 brew "ghq"
 # Alternative to top/htop
 brew "glances"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Creates dependencies in makefiles
@@ -51,6 +54,8 @@ brew "swig"
 brew "telnet"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Concurrently run Go lint tools and normalise their output.
+brew "alecthomas/tap/gometalinter"
 # Task runner / simpler Make alternative written in Go
 brew "go-task/tap/go-task"
 cask "fastlane"
