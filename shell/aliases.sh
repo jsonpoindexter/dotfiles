@@ -24,3 +24,6 @@ alias ping='prettyping --nolegend'
 # glances -> top
 # https://nicolargo.github.io/glances/
 alias top='glances'
+
+# code-insiders -> code
+alias code='code-insiders'
