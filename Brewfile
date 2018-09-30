@@ -2,8 +2,6 @@ tap "alecthomas/tap"
 tap "caryll/tap"
 tap "go-task/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -32,8 +30,6 @@ brew "go"
 brew "httpie"
 # Creates dependencies in makefiles
 brew "makedepend"
-# NCurses Disk Usage
-brew "ncdu"
 # Platform built on V8 to build network applications
 brew "node"
 # Object-relational database system
@@ -58,8 +54,3 @@ brew "zsh"
 brew "alecthomas/tap/gometalinter"
 # Task runner / simpler Make alternative written in Go
 brew "go-task/tap/go-task"
-cask "fastlane"
-cask "font-iosevka"
-cask "jetbrains-toolbox"
-cask "ngrok"
-cask "spotify"
