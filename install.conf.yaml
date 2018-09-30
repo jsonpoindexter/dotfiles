@@ -19,7 +19,6 @@
 - link:
     # git
     "~/.gitconfig": "git/.gitconfig"
-    "~/.launchbadge.gitconfig": "git/.launchbadge.gitconfig"
     "~/.gitignore": "git/.gitignore"
 
     # shell (generic)
