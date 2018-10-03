@@ -1,6 +1,6 @@
 
 # Functions
-fpath=( "$HOME/.zsh/functions" $fpath )
+fpath=( "$HOME/.zsh/functions" "/usr/local/share/zsh-completions" $fpath )
 
 # Settings
 source ~/.zsh/settings.zsh
