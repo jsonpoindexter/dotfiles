@@ -2,8 +2,10 @@ tap "alecthomas/tap"
 tap "caryll/tap"
 tap "go-task/tap"
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "mscharley/homebrew"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Friendly powerful distributed version control system
@@ -28,6 +30,8 @@ brew "glances"
 brew "go"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# The Kubernetes package manager
+brew "kubernetes-helm"
 # Creates dependencies in makefiles
 brew "makedepend"
 # Platform built on V8 to build network applications
@@ -50,7 +54,10 @@ brew "swig"
 brew "telnet"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Additional completion definitions for zsh
+brew "zsh-completions"
 # Concurrently run Go lint tools and normalise their output.
 brew "alecthomas/tap/gometalinter"
 # Task runner / simpler Make alternative written in Go
 brew "go-task/tap/go-task"
+cask "google-cloud-sdk"
