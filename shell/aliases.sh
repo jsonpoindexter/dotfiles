@@ -8,10 +8,9 @@ alias grep='rg'
 alias ls='exa -F --git --group-directories-first'
 
 # ls
-alias l='ls -1a'   # Lists in one column, hidden files.
-alias ll='ls -lh'  # Lists human readable sizes.
-alias lr='ll -R'   # Lists human readable sizes, recursively.
-alias la='ll -a'   # Lists human readable sizes, hidden files.
+alias l='ls -1'    # List only names
+alias ll='ls -l'   # List mode, size, owner, date, name
+alias la='ll -a'   # List and include hidden files
 
 # bat -> cat
 # https://github.com/sharkdp/bat
