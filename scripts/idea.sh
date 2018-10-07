@@ -30,4 +30,13 @@ if [ -d "$1" ]; then
   exit 0
 fi
 
-echo "error: not sure what to do with: $1"
+# Use whatever else we have to filter the list of projects
+# Pull up the fuzzy finder
+PROJECT=$(ghq list --unique $1 | fzf)
+PROJECT_DIR=$(ghq list -p -e $PROJECT)
+
+if [ -d "$PROJECT_DIR" ]; then
+  # Open IDEA on this project
+  open -a "$IDEA" "$PROJECT_DIR"
+  exit 0
+fi
