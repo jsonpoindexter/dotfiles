@@ -2,6 +2,9 @@
 # Functions
 fpath=( "$HOME/.zsh/functions" "/usr/local/share/zsh-completions" $fpath )
 
+# Extend $PATH to allow for ~/.bin
+PATH=$PATH:"$HOME/.bin"
+
 # Settings
 source ~/.zsh/settings.zsh
 

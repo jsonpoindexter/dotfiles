@@ -13,10 +13,14 @@
 
 - shell:
     # Make directories for link
+    - "mkdir -p ~/.bin"
     - "mkdir -p ~/.shell"
     - "mkdir -p ~/.zsh/{plugins,functions}"
 
 - link:
+    # scripts
+    "~/.bin/idea": "scripts/idea.sh"
+
     # git
     "~/.gitconfig": "git/.gitconfig"
     "~/.gitignore": "git/.gitignore"
