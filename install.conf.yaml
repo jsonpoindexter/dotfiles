@@ -20,6 +20,7 @@
 - link:
     # scripts
     "~/.bin/idea": "scripts/idea.sh"
+    "~/.bin/sublm": "scripts/sublm.sh"
 
     # git
     "~/.gitconfig": "git/.gitconfig"
