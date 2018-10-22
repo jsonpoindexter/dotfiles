@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 
 # Find IDEA
 # TODO: Support non toolbox-install
