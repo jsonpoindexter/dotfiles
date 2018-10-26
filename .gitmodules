@@ -1,6 +1,3 @@
-[submodule "dotbot"]
-	path = pkg/dotbot
-	url = https://github.com/anishathalye/dotbot
 [submodule "enhancd"]
 	path = pkg/enhancd
 	url = https://github.com/b4b4r07/enhancd
@@ -22,3 +19,9 @@
 [submodule "zsh-history-substring-search"]
 	path = pkg/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search
+[submodule "alias-tips"]
+	path = pkg/alias-tips
+	url = https://github.com/djui/alias-tips
+[submodule "pkg/dotbot"]
+	path = pkg/dotbot
+	url = https://github.com/anishathalye/dotbot

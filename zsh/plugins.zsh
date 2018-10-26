@@ -68,3 +68,12 @@ source ~/.dotfiles/pkg/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #
 
 source ~/.dotfiles/pkg/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+#
+# alias-tips
+# https://github.com/djui/alias-tips
+#
+
+source ~/.dotfiles/pkg/alias-tips/alias-tips.plugin.zsh
+
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="alias: "
