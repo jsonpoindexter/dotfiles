@@ -59,9 +59,3 @@ setopt HIST_REDUCE_BLANKS
 
 # Don't execute immediately upon history expansion.
 setopt HIST_VERIFY
-
-#
-# Editor
-#
-
-export EDITOR=nano

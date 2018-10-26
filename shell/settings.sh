@@ -1,5 +1,11 @@
 
 #
+# Editor
+#
+
+export EDITOR=nano
+
+#
 # Go
 #
 
