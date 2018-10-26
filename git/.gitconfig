@@ -6,7 +6,7 @@
 	root = ~/Workspace
 
 [include]
-	path = ~/.dotfiles/gitalias/gitalias.txt
+	path = ~/.dotfiles/pkg/gitalias/gitalias.txt
 
 [mergetool]
 	keepBackup = false

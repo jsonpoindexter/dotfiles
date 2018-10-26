@@ -1,17 +1,10 @@
 #!/usr/bin/env sh
 set -e
 
-function update {
+for pkg in $(find pkg -type d -maxdepth 1 -mindepth 1)
+do
     (
-        cd $1
-        git pull origin HEAD
+        cd ./$pkg
+        git pull origin master
     )
-}
-
-update dotbot
-update dotbot-brew
-update enhancd
-update gitalias
-update pure
-update zsh-autosuggestions
-update zsh-syntax-highlighting
+done

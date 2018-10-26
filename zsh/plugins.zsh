@@ -4,7 +4,7 @@
 # https://github.com/b4b4r07/enhancd
 #
 
-source ~/.dotfiles/enhancd/init.sh
+source ~/.dotfiles/pkg/enhancd/init.sh
 
 #
 # zsh-autosuggestions
@@ -14,7 +14,7 @@ source ~/.dotfiles/enhancd/init.sh
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=25      # disables suggestion for large buffers
 
-source ~/.dotfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.dotfiles/pkg/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #
 # fzf
@@ -60,11 +60,11 @@ export FZF_DEFAULT_OPTS="--ansi --prompt '❯ ' --inline-info --layout reverse -
 # https://github.com/zsh-users/zsh-syntax-highlighting
 #
 
-source ~/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.dotfiles/pkg/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #
 # zsh-history-substring-search
 # https://github.com/zsh-users/zsh-history-substring-search
 #
 
-source ~/.dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.dotfiles/pkg/zsh-history-substring-search/zsh-history-substring-search.zsh
