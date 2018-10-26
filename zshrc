@@ -8,14 +8,14 @@ PATH=$PATH:"$HOME/.bin"
 # Settings
 source ~/.zsh/settings.zsh
 
+# Plugins
+source ~/.zsh/plugins.zsh
+
 # Key bindings
 source ~/.zsh/bindings.zsh
 
 # Shell
 for file in ~/.shell/*.sh; do source $file; done
-
-# Plugins
-source ~/.zsh/plugins.zsh
 
 # Prompt
 prompt pure

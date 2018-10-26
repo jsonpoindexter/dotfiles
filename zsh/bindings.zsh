@@ -18,10 +18,13 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[End]}"     ]]  && bindkey  "${key[End]}"     end-of-line
 [[ -n "${key[Insert]}"  ]]  && bindkey  "${key[Insert]}"  overwrite-mode
 [[ -n "${key[Delete]}"  ]]  && bindkey  "${key[Delete]}"  delete-char
-[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"      history-beginning-search-backward
-[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"    history-beginning-search-forward
 [[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"    backward-char
 [[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"   forward-char
+
+# Up/Down through history
+# Ensure that cursor is placed at end of string
+[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"      history-substring-search-up
+[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"    history-substring-search-down
 
 # Bind key combinations
 # TODO: Look into if its possible to use terminfo here

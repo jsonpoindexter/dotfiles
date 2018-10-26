@@ -61,3 +61,10 @@ export FZF_DEFAULT_OPTS="--ansi --prompt '❯ ' --inline-info --layout reverse -
 #
 
 source ~/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#
+# zsh-history-substring-search
+# https://github.com/zsh-users/zsh-history-substring-search
+#
+
+source ~/.dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
