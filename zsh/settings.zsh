@@ -14,6 +14,13 @@ autoload -U edit-command-line && zle -N edit-command-line
 autoload -U promptinit; promptinit
 
 #
+# Directory
+#
+
+# Make cd push the old directory onto the directory stack.
+setopt AUTO_PUSHD
+
+#
 # History
 #
 
