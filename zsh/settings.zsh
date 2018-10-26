@@ -5,6 +5,7 @@
 
 # Completion
 autoload -Uz compinit && compinit -i
+zstyle ':completion:*' menu yes select
 
 # Editing command line
 autoload -U edit-command-line && zle -N edit-command-line
