@@ -31,8 +31,6 @@
 
     # zsh
     "~/.zsh/": "zsh/*.zsh"
-    "~/.zsh/functions/prompt_pure_setup": "pkg/pure/pure.zsh"
-    "~/.zsh/functions/async": "pkg/pure/async.zsh"
     "~/.zshrc": "zshrc"
 
 - brewfile:

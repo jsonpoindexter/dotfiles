@@ -1,5 +1,12 @@
 
 #
+# careful_rm
+# https://github.com/MikeDacre/careful_rm
+#
+
+source ~/.dotfiles/pkg/careful_rm/careful_rm.plugin.zsh
+
+#
 # enhancd
 # https://github.com/b4b4r07/enhancd
 #
@@ -56,11 +63,11 @@ alias preview="fzf --preview 'bat --color \"always\" {}' | xargs bat"
 export FZF_DEFAULT_OPTS="--ansi --prompt '❯ ' --inline-info --layout reverse --height 50%"
 
 #
-# zsh-syntax-highlighting
-# https://github.com/zsh-users/zsh-syntax-highlighting
+# fast-syntax-highlighting
+# https://github.com/zdharma/fast-syntax-highlighting
 #
 
-source ~/.dotfiles/pkg/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.dotfiles/pkg/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 #
 # zsh-history-substring-search
@@ -77,3 +84,20 @@ source ~/.dotfiles/pkg/zsh-history-substring-search/zsh-history-substring-search
 source ~/.dotfiles/pkg/alias-tips/alias-tips.plugin.zsh
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="alias: "
+
+#
+# calc.plugin.zsh
+# > = 5 + 2
+# https://github.com/arzzen/calc.plugin.zsh
+#
+
+source ~/.dotfiles/pkg/calc.plugin.zsh/calc.plugin.zsh
+
+#
+# geometry
+# https://github.com/geometry-zsh/geometry
+#
+
+GEOMETRY_PROMPT_PLUGINS=(exec_time git)
+
+source ~/.dotfiles/pkg/geometry/geometry.zsh
