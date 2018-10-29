@@ -5,6 +5,6 @@ for pkg in $(find pkg -type d -maxdepth 1 -mindepth 1)
 do
     (
         cd ./$pkg
-        git pull origin master
+        git pull origin HEAD
     )
 done
