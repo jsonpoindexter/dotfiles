@@ -26,3 +26,6 @@ alias top='glances'
 
 # code-insiders -> code
 alias code='code-insiders'
+
+# cargo-make -> cm
+alias cm='cargo make --loglevel error'
