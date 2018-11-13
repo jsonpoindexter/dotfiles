@@ -24,3 +24,8 @@
 [alias]
 	ucm = !git au && git cm
 	acm = !git aa && git cm
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
