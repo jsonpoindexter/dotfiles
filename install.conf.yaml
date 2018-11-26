@@ -40,9 +40,6 @@
     # Install Rust (and Cargo)
     - "rustup-init -y --no-modify-path"
 
-    # Switch the terminal to zsh (from brew)
-    - "sudo dscl . -create ~ UserShell /usr/local/bin/zsh"
-
 - shell:
     # [macOS] Make the Dock (dis)appear faster (but still smooth)
     - "defaults write com.apple.dock autohide-delay -float 0"
