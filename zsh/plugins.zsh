@@ -92,12 +92,3 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="alias: "
 #
 
 source ~/.dotfiles/pkg/calc.plugin.zsh/calc.plugin.zsh
-
-#
-# geometry
-# https://github.com/geometry-zsh/geometry
-#
-
-GEOMETRY_PROMPT_PLUGINS=(exec_time git)
-
-source ~/.dotfiles/pkg/geometry/geometry.zsh

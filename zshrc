@@ -16,3 +16,6 @@ source ~/.zsh/bindings.zsh
 
 # Shell
 for file in ~/.shell/*.sh; do source $file; done
+
+# Prompt
+prompt pure
